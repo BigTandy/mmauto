@@ -1,7 +1,8 @@
+/*Navigation bar*/
 #navbar {
 	padding: 0;
 	overflow: hidden;
-	background-color: #333;
+	background-color: #003768;
 	width: 100%;
 }
 li {
@@ -15,12 +16,54 @@ li a {
 	text-align: center;
 	padding: 20px 20px;
 	text-decoration: none;
+	font-size: 20px;
 }
 
-li a:hover:not(.active) {
-	background-color: #111;
+li a:hover {
+	color: #fcca17;
 }
 
 .active {
-	background-color: #04AA6D;
+	background-color: #002D54;
+}
+
+/*Removes arrows from number input*/
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*Form Styling*/
+form {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+textarea {
+	width: 98%;
+}
+legend {
+	font-size: 30px;
+}
+label {
+	font-size: 25px;
+}
+/*Page Styling*/
+input[type=submit], input[type=reset] {
+	background-color: #003768;
+	border: none;
+	color: white;
+	padding: 15px 30px;
+	text-decoration: none;
+	cursor: pointer;
+    }
+input[type=submit]:hover, input[type=reset]:hover {
+	color: #fcca17;
+}
+body {
+	background-color: #FFF5D4
 }
