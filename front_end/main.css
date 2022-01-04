@@ -1,111 +1,92 @@
-/*Navigation bar*/
-#navbar {
-	padding: 0;
-	overflow: hidden;
-	background-color: #003768;
-	width: 100%;
-}
-li {
-	list-style-type: none;
-	float: right;
-}
+/*Styling done to all the pages*/
+	body {
+		margin: 0;
+	}
 
-li a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 20px 20px;
-	text-decoration: none;
-	font-size: 20px;
-	cursor: pointer;
-}
+/*The naviagtion bar at the top of the screen*/
+	#navbar {
+		padding: 0;
+		overflow: hidden;
+		background-color: #003768;
+		width: 100%;
+		margin: 0;
+	}
+	li {
+		list-style-type: none;
+		float: right;
+	}
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 20px 20px;
+		text-decoration: none;
+		font-size: 20px;
+		cursor: pointer;
+	}
+	/*Changes text color on hover*/
+	li a:hover {
+		color: #fcca17;
+		transition: .2s;
+	}
+	/*Class to change navbar button background on active page*/
+	.active {
+		background-color: #002D54;
+	}
+	h2 {
+		color: white;
+		padding-left: 10px;
+		padding-bottom: 0;
+	}
 
-li a:hover {
-	color: #fcca17;
-}
+/*Form formatting*/
+	form {
+		padding: 5px;
+		width: 60%;
+	}
+	.form-cell {
+		display: inline-block;
+		padding:4px;
+	}
+	/*Removes arrows from number input*/
+	input[type=number] {
+	-moz-appearance: textfield;
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+	}
+	textarea {
+		width: 98%;
+	}
+	legend {
+		font-size: 30px;
+	}
+	label {
+		font-size: 25px;
+	}
+	h1 {
+		font-size: 50px;
+	}
+	form {
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
 
-.active {
-	background-color: #002D54;
-}
-h2 {
-	color: white;
-}
-/*Removes arrows from number input*/
-input[type=number] {
-  -moz-appearance: textfield;
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-/*Form Styling*/
-form {
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-}
-textarea {
-	width: 98%;
-}
-legend {
-	font-size: 30px;
-}
-label {
-	font-size: 25px;
-}
-/*Page Styling*/
-input[type=submit], input[type=reset] {
-	background-color: #003768;
-	border: none;
-	color: white;
-	padding: 15px 30px;
-	text-decoration: none;
-	cursor: pointer;
-    }
-input[type=submit]:hover, input[type=reset]:hover, #service:hover {
-	color: #fcca17;
-}
-body {
-	background-color: #FFF5D4
-}
-#logo {
-	width:40%;
-	z-index: 1;
-	margin-left: 10px;
-	margin-top: 5px;
-	position: absolute;
-}
-#school {
-	width: 100%;
-	height:600px;
-	overflow: hidden;
-}
-.footer {
-   position: fixed;
-   bottom: 0;
-   width: 100%;
-}
-#refuse {
-	float: left;
-}
-h1 {
-	font-size: 50px;
-}
-#service {
-	background-color: #003768;
-	border: none;
-	color: white;
-	padding: 50px 100px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 30px;
-	margin: 4px 2px;
-	cursor: pointer;
-	float: right;
-}
-p {
-	text-align: center;
-}
+/*Images styling*/
+	#logo {
+		width:40%;
+		z-index: 1;
+		margin-left: 10px;
+		margin-top: 5px;
+		position: absolute;
+	}
+	#school {
+		width: 100%;
+		height:600px;
+		overflow: hidden;
+	}
+

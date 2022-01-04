@@ -1,73 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Minuteman Auto</title>
-<link rel="stylesheet" href="main.css">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-</head>
+	<head>
+		<title>Minuteman Auto</title>
+		<link rel="stylesheet" href="main.css">
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	</head>
+</html>
 <body>
-	<div id="navbar">
-		<li><a class="active" href="#contact">Contact</a></li>
+	<div id='navbar'>
+		<li><a class="active" href="#request">Request Service</a></li>
 		<li><a href="index.html">Home</a></li>
-		<h2>&nbsp Minuteman Automotive Shop</h2>
+		<h2>Minuteman Automotive Shop</h2>
 	</div>
-
-
-<br>
-
-<form>
-
-<h1>Customer Request</h1>
-
-<fieldset><legend>Personal Information</legend>
-<br>
-	<label for="fname">First Name:</label> 
-		<input id="fname" name="fname" type="text" required> &nbsp; &nbsp;
-	<label for="lname">Last Name:</label>
-		<input id="lname" name="lname" type="text" required> &nbsp; &nbsp;
-	<label for="email">E-Mail:</label>
-		<input name="email" type="email" required> &nbsp; &nbsp;
-<br><br>
-	<label for="phone">Phone Number:</label> 
-		<input name="phone" type="tel" required>
-</fieldset>
-
-<br>
-
-<fieldset><legend>Vehicle Information</legend>
-<br>
-	<label for="vehicle_make">Vehicle Make:</label>
-		<input name="vehicle_make" type="text" maxlength="30" required>&nbsp; &nbsp;
-	<label for="vehicle_model">Vehicle Model:</label>
-		<input name="vehicle_model" type="text" maxlength="30" required>
-<br><br><br>
-		<label for ="vehicle_left">Can this vehicle be left until work is completed?</label>
-<br><br>
-	<label>Yes</label>
-	<input name="vehicle_left" type="radio" value="Yes" required> &nbsp;
-	<label>No</label>
-	<input name="vehicle_left" type="radio" value="No" required> &nbsp;
-</fieldset>
-
-<br>
-
-<fieldset><legend>Description of Work Required</legend>
-	<br><textarea name="description" rows="5" required></textarea>
-</fieldset>
-
-<br>
-
-<input type="submit" value="Submit">
-<input type="Reset" value="Reset">
-</form>
-	<a href="mailto:Automotive@minuteman.org">
-	<p><strong>Click here</strong></a> to schedule an appointment or call us at 781-372-2994.
-<br>
-	Location: Minuteman High School, 758 Marrett Road (Rt. 2A), Lexington, MA</p>
-<br><br>
-	<div class="footer">
-		<p>Images Subject To Their Copyright Holder - All Rights Reserved</p>
+	
+<br>	
+	<div class="main">
+	
+	<form autocomplete="off">
+	<h1>Customer Request</h1>
+		<fieldset> <!--Form data for customers information-->
+			<legend>Personal Imformation</legend>
+			<div class='form-cell'>
+				<label for="fname">First Name:</label> 
+					<input id="fname" name="fname" type="text" required>
+			</div>
+			
+			<div class='form-cell'>
+				<label for="lname">Last Name:</label>
+					<input id="lname" name="lname" type="text" required>
+			</div>
+			
+			<div class='form-cell'>
+				<label for="email">E-Mail:</label>
+					<input name="email" type="email" required>
+			</div>
+			
+			<div class='form-cell'>
+				<label for="phone">Phone Number:</label> 
+					<input name="phone" type="tel" required>
+			</div>
+		</fieldset>
+	
+		<fieldset> <!--Form data for customers vehicle information-->
+			<legend>Vehicle Information</legend>
+			<div class='form-cell'>
+				<label for="vehicle_make">Vehicle Make:</label>
+					<input name="vehicle_make" type="text" maxlength="30" required>
+			</div>
+				
+			<div class='form-cell'>
+				<label for="vehicle_model">Vehicle Model:</label>
+					<input name="vehicle_model" type="text" maxlength="30" required>
+			</div>
+				
+			<div class='form-cell'>
+				<label for="vehicle_year">Vehicle Year:</label>
+					<input name="vehicle_year" id="vehicle_year" type="number" maxlength="4" required>
+			</div>
+			
+			<div class='form-cell'>
+				<label for ="vehicle_left">Can this vehicle be left until work is completed?</label>
+				<label>Yes</label>
+					<input name="vehicle_left" type="radio" value="Yes" required>
+				<label>No</label>
+					<input name="vehicle_left" type="radio" value="No" required>
+			</div>
+			
+		</fieldset>
+		
+		<fieldset>
+			<legend>Description of Work Required</legend>
+				<br>
+				<textarea name="description" rows="5" required></textarea>
+		</fieldset>
+		
+	</form>
 	</div>
 <script src="main.js"></script>
 </body>
-</html>
