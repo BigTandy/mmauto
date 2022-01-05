@@ -90,3 +90,53 @@
 		overflow: hidden;
 	}
 
+/*Main styling*/
+	#refuse {
+		float: left;
+		padding-left: 10px;
+	}
+	#service {
+		background-color: #fcca17;
+		border-color: #fcca17;
+		border-width:2px;
+		border-style: solid;
+		transition: .2s;
+		color: #003768;
+		padding: 50px 50px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 30px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+	#service:hover {
+		background-color: white;
+		border-color: #fcca17;
+	}
+	#contact {
+		background-color: #fcca17;
+		border-color: #fcca17;
+		border-width:2px;
+		border-style: solid;
+		transition: .2s;
+		color: #003768;
+		padding: 50px 100px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 30px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+	#contact:hover {
+		background-color: white;
+		border-color: #fcca17;
+	}
+	#button_links {
+		float: right;
+		padding-right: 7%;
+		padding-top: 2%;
+	}
