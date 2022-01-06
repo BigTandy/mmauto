@@ -2,6 +2,15 @@
 	body {
 		margin: 0;
 	}
+	* {
+		box-sizing: border-box;
+	}
+	.desktop {
+		display: initial;
+	}
+	.mobile {
+		display: none;
+	}
 
 /*The naviagtion bar at the top of the screen*/
 	#navbar {
@@ -10,6 +19,7 @@
 		background-color: #003768;
 		width: 100%;
 		margin: 0;
+		display: flex-block;
 	}
 	li {
 		list-style-type: none;
@@ -37,44 +47,9 @@
 		color: white;
 		padding-left: 10px;
 		padding-bottom: 0;
+		float: left;
 	}
 
-/*Form formatting*/
-	form {
-		padding: 5px;
-		width: 60%;
-	}
-	.form-cell {
-		display: inline-block;
-		padding:4px;
-	}
-	/*Removes arrows from number input*/
-	input[type=number] {
-	-moz-appearance: textfield;
-	}
-	input::-webkit-outer-spin-button,
-	input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-	}
-	textarea {
-		width: 98%;
-	}
-	legend {
-		font-size: 30px;
-	}
-	label {
-		font-size: 25px;
-	}
-	h1 {
-		font-size: 50px;
-	}
-	form {
-		width: 60%;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-	}
 
 /*Images styling*/
 	#logo {
@@ -88,6 +63,7 @@
 		width: 100%;
 		height:600px;
 		overflow: hidden;
+		object-fit: cover;
 	}
 
 /*Main styling*/
@@ -139,4 +115,41 @@
 		float: right;
 		padding-right: 7%;
 		padding-top: 2%;
+	}
+	
+	
+	
+	
+/*Mobile Code*/
+	@media only screen and (max-width: 700px) {
+		.desktop {
+			display: none;
+		}
+		.mobile {
+			display: initial;
+		}
+		body {
+			display: grid;
+		}
+		.mobile #button_links {
+			margin-left: auto;
+			margin-right: auto;
+			display: inline;
+		}
+		.mobile #navbar {
+			display: grid;
+		}
+		.mobile #logo {
+			width:40%;
+			margin-left: 10px;
+			margin-top: 5px;
+			position: absolute;
+		}
+		.mobile h3, h2, h1 {
+			text-align: center;
+		}
+		.mobile #button_links {
+			display: inline;
+			text-align: center;
+		}
 	}
