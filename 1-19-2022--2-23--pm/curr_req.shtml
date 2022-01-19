@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /*table, tr {
+                background-color: lightseagreen;
+                border-style: double;
+                
+            }
+            td {
+                color: lightgreen;
+            }
+            table tr:nth-child(even) {
+                background-color: pink;
+            }*/
+        </style>
+    </head>
+    <body>
+        <!--#exec cgi="/current_requests.py" -->
+        
+    </body>
+</html>
