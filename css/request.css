@@ -1,0 +1,64 @@
+/*Form formatting*/
+	form {
+		padding: 5px;
+		width: 60%;
+	}
+	.form-cell {
+		display: inline-block;
+		padding:4px;
+	}
+	/*Removes arrows from number input*/
+	input[type=number] {
+	-moz-appearance: textfield;
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+	}
+	textarea {
+		width: 98%;
+	}
+	legend {
+		font-size: 30px;
+	}
+	label {
+		font-size: 25px;
+	}
+	h1 {
+		font-size: 50px;
+	}
+	form {
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	
+	
+	
+/*Mobile Code*/
+	@media only screen and (max-width: 700px) {
+		.mobile input[type=text], input[type=email], input[type=tel], input[type=number]{
+			height: 60px;
+			text-align: center;
+		}
+		.mobile input[type=radio] {
+			width: 50px; height: 50px;
+		}
+		.mobile #buttons {
+			display: flex;
+			padding: 5px;
+		}
+		.mobile #button_yes {
+			display: block;
+			padding-right: 10px;
+		}
+		.mobile #button_no {
+			display: block;
+			padding-left: 10px;
+		}
+		.mobile {
+			
+		}
+	}

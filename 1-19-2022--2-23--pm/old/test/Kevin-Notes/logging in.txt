@@ -1,2 +1,0 @@
-Outside of the minuteman network (not a school laptop) you NEED to use the email as the username otherwise it will NOT work!!!!
-The password would be the same as you would login to a computer on the minuteman network.

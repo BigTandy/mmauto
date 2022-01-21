@@ -1,0 +1,197 @@
+/*Styling done to all the pages*/
+	body {
+		margin: 0;
+	}
+	* {
+		box-sizing: border-box;
+	}
+	.desktop {
+		display: initial;
+	}
+	.mobile {
+		display: none;
+	}
+/*The naviagtion bar at the top of the screen*/
+	.navbar {
+		padding: 0;
+		overflow: hidden;
+		background-color: #003768;
+		width: 100%;
+		margin: 0;
+		display: flex-block;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style-type: none;
+		float: right;
+		display: inline;
+	}
+	.navbar a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 20px 20px;
+		text-decoration: none;
+		font-size: 20px;
+		cursor: pointer;
+	}
+	/*Changes text color on hover*/
+	.navbar a:hover {
+		color: #fcca17;
+		transition: .2s;
+	}
+	/*Class to change navbar button background on active page*/
+	.active {
+		background-color: #002D54;
+	}
+	h2 {
+		color: white;
+		padding-left: 10px;
+		padding-bottom: 0;
+		float: left;
+	}
+
+
+/*Images styling*/
+	.logo {
+		width:40%;
+		z-index: 1;
+		margin-left: 10px;
+		margin-top: 5px;
+		position: absolute;
+	}
+	.school {
+		width: 100%;
+		height:600px;
+		overflow: hidden;
+		object-fit: cover;
+	}
+	.shop {
+		width: 60%;
+		height: auto;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 10px;
+	}
+
+/*Main styling*/
+	.refuse {
+		float: left;
+		padding-left: 10px;
+	}
+	.service {
+		background-color: #fcca17;
+		border-color: #fcca17;
+		border-width:2px;
+		border-style: solid;
+		transition: .2s;
+		color: #003768;
+		padding: 50px 50px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 30px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+	.service:hover {
+		background-color: white;
+		border-color: #fcca17;
+	}
+	.contact {
+		background-color: #fcca17;
+		border-color: #fcca17;
+		border-width:2px;
+		border-style: solid;
+		transition: .2s;
+		color: #003768;
+		padding: 50px 100px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 30px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+	.contact:hover {
+		background-color: white;
+		border-color: #fcca17;
+	}
+	.button_links {
+		float: right;
+		padding-right: 7%;
+		padding-top: 2%;
+	}
+	.conserv {
+		text-align: center;
+		width: 60%;
+		display: block;
+		margin: auto;
+		padding: 10px;
+		font-size: 20px;
+	}
+	.conserv2 {
+		text-align: center;
+		width: 60%;
+		display: block;
+		margin: auto;
+		padding: 10px;
+		font-size: 20px;
+		color: black;
+	}
+	.colblack {
+		color:black
+	}
+	
+	
+	
+	
+/*Mobile Code*/
+	@media only screen and (max-width: 780px) {
+		.desktop {
+			display: none;
+		}
+		.mobile {
+			display: initial;
+		}
+		body {
+			display: grid;
+		}
+		.mobile .button_links {
+			margin-left: auto;
+			margin-right: auto;
+			display: inline;
+		}
+		.mobile .navbar {
+			display: grid;
+		}
+		.mobile .logo {
+			width:40%;
+			margin-left: 10px;
+			margin-top: 5px;
+			position: absolute;
+		}
+		.mobile h3, h2, h1 {
+			text-align: center;
+		}
+		.mobile .button_links {
+			display: inline;
+			text-align: center;
+		}
+		.mobile .shop {
+			width: 100%;
+		}
+		.mobile .conserv {
+			width: 100%;
+		}
+		.mobile .conserv2 {
+			
+		}
+	}

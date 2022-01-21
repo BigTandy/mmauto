@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<button class="back" onclick="window.location.href='/index.html';">Home</button>
+<a class="sign" href="signup.html">Sign Up</a>
+	<div id="container">
+		<div id="login">
+			<h1>User Login</h1>
+			
+			<form method="post" action="/core/login.py">
+				<div id="image">
+					<label for="uname"><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" name="uname" required>
+<br><br>
+					<label for="pswd"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="pswd" required>
+				</div>
+				<div id="info">
+					
+				</div>
+				<div id="button">
+					
+				</div>
+<br><br>
+				<input type="submit" value="Login">
+				<!--<a href="\Admin_Page\service.shtml">Login</a>-->
+			</form>
+		</div>
+	</div>
+
+	<script>
+
+		let anch = window.location.hash;
+
+		switch(anch){
+
+			case "#pass":
+				alert("Password Incorrect")
+				break;
+			case "#invalid":
+				alert('Invalid Or Unfound Username, please only have one space between your first and last name')
+				break;
+			case "#userNF":
+				alert("No User Matching That Name Found in DB, Please Check Name and Try Again")
+				break;
+
+		}
+
+	</script>
+	
+</body>
+</html>
