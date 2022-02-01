@@ -1,6 +1,8 @@
 import cgi
 import cgitb
 
+from mysql.connector.errors import DatabaseError
+
 cgitb.enable()
 
 import datetime as dt
@@ -9,31 +11,45 @@ import datetime as dt
 #print("")                             # blank line, end of headers
 
 import html
-#import core.db as db
 
-#dataBase = db.dataBaseConnector()
+import session_handle as sh
+
+try:
+    import core.db as db
+except ModuleNotFoundError:
+    import db as db
+
+
+
+dataBase = db.dataBaseConnector()
 #requestsT = db.requestsTable()
 
 form = cgi.FieldStorage()
+
+sess = sh.start()
+
 
 print("Content-Type: text/html")    # HTML is following
 print("")
 
 
-for item in form:
-    print(f"{item} ~ {form[item]}<br>")
-    if isinstance(form[item], list):
-        for car in form[item]:
-            print(f"<i>{car}</i><br>")
+
+for item in form.getlist("APPROVE"):
+
+    reqTab = dataBase.select("SELECT * FROM `requests` WHERE `id` = %s", (item, ))
+
+    dataBase.execute("INSERT INTO `automotive`.`approved` (`id`, `firstName`, `lastName`, `EMail`, `phoneNumber`, `vMake`, `vModel`, `vYear`, `canBeLeft`, `descrip`, `datetime`, `whoApproved`, `whenApr`) VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, NULL, NULL);", (reqTab[0]["firstName"], reqTab[0]["lastName"], reqTab[0]["EMail"], reqTab[0]["phoneNumber"], reqTab[0]["vMake"], reqTab[0]["vModel"], reqTab[0]["vYear"], reqTab[0]["canBeLeft"], reqTab[0]["descrip"], reqTab[0]["datetime"] ))
+
+    dataBase.execute("DELETE FROM `requests` WHERE `id` = %s", (reqTab["id"],))
+
+    
+for item in form.getlist("DELETE"):
+    dataBase.execute("DELETE FROM `requests` WHERE `id` = %s", (item,))
 
 
+print("<script>window.location.replace('/admin/index.shtml');</script>")
+quit()
 
-
-
-#requestsT.insert((form["fname"], form["lname"], form["email"], form["phone"], form["vehicle_make"], form["vehicle_model"], form["vehicle_year"], vLeft, form["description"], dt.datetime.now()))
-
-
-#print(requestsT.select())
 
 #print("HTTP/1.1 303 See Other")
 #print("Location: index.html")

@@ -48,7 +48,10 @@ passSalt = passHash(form["pswd"])
 
 dataBase.execute("INSERT INTO `users` (`id`, `fName`, `lName`, `role`, `password`, `salt`) VALUES (NULL, %s, %s, 0, %s, %s)", (form["firstname"], form["lastname"], passSalt[0], passSalt[1]))
 
-print("HTTP/1.1 303 See Other")
-print("Location: /login_page/login.html")
+print("HTTP/1.1 200 Ok")
+#print("Location: /login_page/login.html")
 print("Content-Type: text/html")    # HTML is following
 print("")
+
+print("<script>window.location.replace('/login_page/login.html');</script>")
+quit()

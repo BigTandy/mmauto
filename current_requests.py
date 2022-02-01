@@ -44,7 +44,7 @@ if sess == None:
     quit()
 
 print("""
-<table>
+<table autocomplete="off">
 <tr>
     <th>Name</th>
     <th>E-Mail</th>
@@ -53,7 +53,7 @@ print("""
     <th>Can be left?</th>
     <th>Description</th>
     <th>Approve?</th>
-    <th>Delete?</th>
+    <th>Deny?</th>
 </tr>
 
 """)
@@ -74,6 +74,7 @@ for req in requestsT.select():
         <td>{req["descrip"]}</td>
         <td>
             <input type="checkbox" name="APPROVE" value="{req["id"]}" />
+            <input type="text" name="APPRWHO" id="apprwho" />
          </td>
         <td>
             <input type="checkbox" name="DELETE" value="{req["id"]}" />
